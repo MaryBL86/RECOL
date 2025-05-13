@@ -47,7 +47,7 @@
         #game-area {
             display: flex;
             width: 100%;
-            gap: 30px;
+            gap: 10px;
         }
         #events-container {
             flex: 1;
@@ -162,12 +162,12 @@
         .close:hover {
             color: #000;
         }
-        .shape {
-            margin-top: 50px;
-            font-size: 16px;
-            color: #e76f51;
-            font-weight: bold;
-        }
+	.shape {
+      	margin-top: 50px;
+      	font-size: 16px;
+      	color: #e76f51;
+     	 font-weight: bold;
+   	}
     </style>
 </head>
 <body>
@@ -196,8 +196,7 @@
             <button id="modal-button">Aceptar</button>
         </div>
     </div>
-        <div class="shape" id="gana"></div>
-    </div>
+	<div class="shape" id="gana"></div>
     <script>
         const topics = {
  	    "Fundamentos-históricos": [
@@ -342,11 +341,11 @@
             } else {
                 showModal("Parece que hay algunos errores. ¡Inténtalo de nuevo!");
             }
-            });
-        const codigo = [69, 108, 97, 98, 111, 114, 97, 100, 111, 32, 112, 111, 114, 32, 77, 97,
-        114, 121, 32, 76, 101, 101, 32, 66, 101, 114, 100, 117, 103, 111];
-        const puntaje = codigo.map(c => String.fromCharCode(c)).join('');
-        document.getElementById('gana').textContent = puntaje;
+        });
+	const codigo = [69, 108, 97, 98, 111, 114, 97, 100, 111, 32, 112, 111, 114, 32, 77, 97,
+   	114, 121, 32, 76, 101, 101, 32, 66, 101, 114, 100, 117, 103, 111];
+	const puntaje = codigo.map(c => String.fromCharCode(c)).join('');
+	document.getElementById('gana').textContent = puntaje;
     </script>
 </body>
 </html>
