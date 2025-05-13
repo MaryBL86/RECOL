@@ -46,13 +46,20 @@
         .card:hover {
             background-color: #2980b9;
         }
-        .card.selected {
+        
+	.card.selected {
             background-color: #2ecc71;
         }
         .card.matched {
             background-color: #27ae60;
             cursor: default;
         }
+        .shape {
+            margin-top: 50px;
+            font-size: 16px;
+            color: #e76f51;
+            font-weight: bold;
+        }       
         #stats {
             margin-top: 30px;
             font-weight: bold;
@@ -87,8 +94,9 @@
         <div id="game-area" class="game-area"></div>
         <div id="stats">Intentos: 0 | Tiempo: 0.0s</div>
         <button id="restart-btn">Reiniciar tablero</button>
-        <div id="author">Elaborado por: Mary Lee Berdugo</div>
     </div>
+    </div>
+	<div class="shape" id="gana"></div>
 
     <script>
         const allConcepts = [
@@ -194,6 +202,11 @@
         document.getElementById('restart-btn').addEventListener('click', initGame);
 
         initGame();
+
+	const codigo = [69, 108, 97, 98, 111, 114, 97, 100, 111, 32, 112, 111, 114, 32, 77, 97,
+   	114, 121, 32, 76, 101, 101, 32, 66, 101, 114, 100, 117, 103, 111];
+	const puntaje = codigo.map(c => String.fromCharCode(c)).join('');
+	document.getElementById('gana').textContent = puntaje;
     </script>
 </body>
 </html>
