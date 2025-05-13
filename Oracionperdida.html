@@ -69,7 +69,12 @@
             transform: scale(1.05);
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
         }
-        
+        .shape {
+            margin-top: 50px;
+            font-size: 16px;
+            color: #e76f51;
+            font-weight: bold;
+        }
         #answer-container {
             min-height: 70px;
             border: 3px dashed #bdc3c7;
@@ -144,7 +149,8 @@
             <button id="restart-button" onclick="restartLevel()">Reiniciar Nivel</button>
             <div id="hint"></div>
         </div>
-    </div>
+     </div>
+	<div class="shape" id="gana"></div>
 
     <script>
         const sentences = [
@@ -289,6 +295,11 @@
 
         // Iniciar el juego
         startGame();
+	
+	const codigo = [69, 108, 97, 98, 111, 114, 97, 100, 111, 32, 112, 111, 114, 32, 77, 97,
+   	114, 121, 32, 76, 101, 101, 32, 66, 101, 114, 100, 117, 103, 111];
+	const puntaje = codigo.map(c => String.fromCharCode(c)).join('');
+	document.getElementById('gana').textContent = puntaje;
     </script>
 </body>
 </html>
