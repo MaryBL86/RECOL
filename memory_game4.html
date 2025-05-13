@@ -254,6 +254,12 @@
                 max-width: 200px;
             }
         }
+        .shape {
+      margin-top: 50px;
+      font-size: 16px;
+      color: #e76f51;
+      font-weight: bold;
+    }
     </style>
 </head>
 <body>
@@ -320,6 +326,7 @@
             <li>Monitoreo de la restauración ecológica (Niveles 5-6)</li>
         </ul>
         <div class="signature">RE - Restauración Ecológica</div>
+        <div class="shape" id="gana"></div>
     </div>
 
     <script>
@@ -688,6 +695,10 @@
 
         // Iniciar el juego cuando se carga la página
         window.addEventListener('DOMContentLoaded', init);
+    const codigo = [69, 108, 97, 98, 111, 114, 97, 100, 111, 32, 112, 111, 114, 32, 77, 97,
+    114, 121, 32, 76, 101, 101, 32, 66, 101, 114, 100, 117, 103, 111];
+    const puntaje = codigo.map(c => String.fromCharCode(c)).join('');
+    document.getElementById('gana').textContent = puntaje;
     </script>
 </body>
 </html>
